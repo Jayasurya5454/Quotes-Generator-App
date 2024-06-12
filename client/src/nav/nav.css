@@ -1,0 +1,31 @@
+.nav, .nav li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8%;
+  width: 100%;
+  background-color: #121820;
+  color: whitesmoke;
+}
+
+.nav li a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.nav li{
+  list-style: none;
+  font-size: 18px;
+  padding: 0px 3%;
+  transition: 0.5s;
+  border-right: 2px yellow solid;
+}
+
+.nav li:last-child {
+  border: none;
+}
+
+.nav li:hover,.nav li a:hover {
+  color: gold;
+  cursor: pointer;
+}

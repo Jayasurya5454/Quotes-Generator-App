@@ -1,0 +1,60 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(50, 205, 97);
+  opacity: 0.7;
+}
+
+.quote {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 36%;
+  width: 60%;
+  border-radius: 24px;
+  box-shadow: 6px 6px 30px rgba(0,0,0,0.7);
+  margin-bottom: 21px;
+  padding: 18px;
+  font-family: cursive;
+  font-size: 21px;
+}
+
+.quote .Aquote {
+  height: 85%;
+  width: 100%;
+  overflow: auto;
+}
+
+.quote .author {
+  width: 100%;
+  padding-top: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main button {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-family: monospace;
+  padding: 12px;
+  border-radius: 18px;
+  background-color: #121820;
+  color: wheat;
+}
+
+.main button:hover {
+  background-color: wheat;
+  color: #121820;
+  cursor:auto;
+}
