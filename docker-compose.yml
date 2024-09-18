@@ -1,0 +1,38 @@
+version: '3'
+services:
+  db:
+    image: mongo:latest
+    volumes: 
+     - database:/data/db
+     - ./quotes.json:/docker-entrypoint-initdb.d/quotes.json
+    ports:
+      - 27018:27017
+
+  import_data:
+    image: mongo:latest
+    depends_on:
+      - db
+    entrypoint: mongoimport --host db --db mydatabase --collection quotes --file /quotes.json --jsonArray
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+      - import_data
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 5000:3000
+    depends_on:
+      - db
+      - import_data
+
+volumes:
+  database:
