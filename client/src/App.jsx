@@ -10,6 +10,7 @@ let App = () => {
       <Nav />
       <Hero />
     </div>
+    
   )
 }
 
